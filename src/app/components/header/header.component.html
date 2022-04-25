@@ -1,0 +1,11 @@
+<div class="header">
+  <img
+    *ngIf="canGoBack()"
+    (click)="goBack()"
+    class="back"
+    src="assets/arrow-left.png"
+    alt="Back"
+    height="32px"
+  />
+  <h1 *ngIf="title">{{ title }}</h1>
+</div>

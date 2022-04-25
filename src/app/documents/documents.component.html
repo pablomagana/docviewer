@@ -1,0 +1,30 @@
+<app-header title="Documentos"></app-header>
+<div class="content">
+  <div class="content-filter">
+    <select [(ngModel)]="filterValue" (change)="updateSearch()">
+      <option *ngFor="let filter of filters" [ngValue]="filter">
+        {{ filter.name }}
+      </option>
+    </select>
+  </div>
+  <div
+    class="content-documents"
+    *ngFor="let doc of documents; trackBy: trackByCode"
+  >
+    <app-doc-card
+      [doc]="doc"
+      (onDelete)="deleteDocument(doc)"
+      (click)="goToDocumentDetail(doc)"
+    ></app-doc-card>
+  </div>
+  <div class="content-pagination">
+    <div>
+      <button *ngIf="currentPage > 1" (click)="setPage(-1)">Anterior</button>
+    </div>
+    <div>
+      <button *ngIf="currentPage < lastPage" (click)="setPage(+1)">
+        Siguiente
+      </button>
+    </div>
+  </div>
+</div>

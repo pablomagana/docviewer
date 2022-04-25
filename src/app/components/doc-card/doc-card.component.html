@@ -1,0 +1,14 @@
+<div class="content-doc-card">
+  <div class="content-doc-card-left">
+    <img [src]="doc.image" alt="document" height="40px" />
+  </div>
+  <div class="content-doc-card-right">
+    <span>{{ doc.title }}</span>
+    <span>{{ doc.date | date: "dd/MM/yyyy" }}</span>
+  </div>
+  <div class="content-actions">
+    <button (click)="deleteDoc(doc, $event)">
+      <img height="16px" src="assets/delete-btn.svg" alt="delete" />
+    </button>
+  </div>
+</div>

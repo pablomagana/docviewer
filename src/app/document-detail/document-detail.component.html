@@ -1,0 +1,18 @@
+<app-header
+  title="Detalles de documento"
+  [routeGoBack]="routeGoBack"
+></app-header>
+<div class="content" *ngIf="doc">
+  <div class="content-header">
+    <h1>{{ doc.title }}</h1>
+    <span>{{ doc.date | date: "dd/mm/yyyy" }}</span>
+  </div>
+  <div *ngIf="isNotSimpleType()" class="content-body">
+    <div class="content-body-text">
+      <p>{{ doc.text }}</p>
+    </div>
+    <div class="content-body-image">
+      <img *ngIf="hasImage()" [src]="doc.image" alt="Image" />
+    </div>
+  </div>
+</div>

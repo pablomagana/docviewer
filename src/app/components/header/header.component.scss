@@ -1,0 +1,18 @@
+:host {
+  .header {
+    height: 100px;
+    border: #e0e0e0 1px solid;
+    background-color: #213e62;
+    color: #fff;
+    padding-left: 20px;
+    margin: -1px -1px 0;
+    display: flex;
+    align-items: center;
+  }
+  .back {
+    margin-right: 20px;
+    &img {
+      color: #fff;
+    }
+  }
+}

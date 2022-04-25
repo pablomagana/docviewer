@@ -1,0 +1,19 @@
+:host {
+  .content {
+    padding: 20px;
+  }
+  .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .content-body-text p {
+    text-align: justify;
+  }
+  .content-body-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

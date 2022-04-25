@@ -1,0 +1,19 @@
+:host {
+  .content {
+    padding: 20px;
+  }
+  .content-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+  .content-documents {
+    margin-top: 15px;
+  }
+  .content-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+}
